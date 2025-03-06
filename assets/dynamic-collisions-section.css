@@ -5,20 +5,8 @@
     --white-color: #fff;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    overflow-x: hidden;
-}
-
 body {
     font-family: 'Oswald', sans-serif;
-
     background: linear-gradient(to right,
             #fbfaff 0%,
             40.00000059604645%,
@@ -110,7 +98,7 @@ canvas {
     font-size: 14px;
 }
 
-.banner-inner {
+.dynamic_banner-inner {
     padding: 100px 20px 30px;
     min-height: calc(100dvh - 90px);
     gap: 10px;
@@ -123,19 +111,19 @@ canvas {
     height: 100%;
 }
 
-.banner-inner .top-desc h5 {
+.dynamic_banner-inner .top-desc h5 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 4px;
 }
 
-.banner-inner .top-desc h6 {
+.dynamic_banner-inner .top-desc h6 {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 8px;
 }
 
-.banner-inner .top-desc span {
+.dynamic_banner-inner .top-desc span {
     display: inline-block;
     width: 20px;
     height: 3px;
@@ -143,7 +131,7 @@ canvas {
     border-radius: 50px;
 }
 
-.banner-inner .bottom-desc {
+.dynamic_banner-inner .bottom-desc {
     display: flex;
     display: -webkit-flex;
     justify-content: space-between;
@@ -152,35 +140,35 @@ canvas {
     -webkit-align-items: flex-end;
 }
 
-.banner-inner .bottom-desc .left-desc h1 {
+.dynamic_banner-inner .bottom-desc .left-desc h1 {
     margin-bottom: 20px;
 }
 
-.banner-inner .bottom-desc .left-desc .desc-inner h5 {
+.dynamic_banner-inner .bottom-desc .left-desc .desc-inner h5 {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 4px;
 }
 
-.banner-inner .bottom-desc .left-desc .desc-inner h6 {
+.dynamic_banner-inner .bottom-desc .left-desc .desc-inner h6 {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 0px;
 }
 
-.banner-inner .bottom-desc .middle-desc h2 {
+.dynamic_banner-inner .bottom-desc .middle-desc h2 {
     text-transform: uppercase;
     letter-spacing: -2px;
 }
 
-.banner-inner .bottom-desc .right-desc h1 {
+.dynamic_banner-inner .bottom-desc .right-desc h1 {
     margin-bottom: 20px;
     padding-right: 60px;
     position: relative;
     text-align: right;
 }
 
-.banner-inner .bottom-desc .right-desc h1::after {
+.dynamic_banner-inner .bottom-desc .right-desc h1::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -192,7 +180,7 @@ canvas {
     -webkit-transform: translate(-30%, 100%);
 }
 
-.banner-inner .bottom-desc .right-desc .desc-inner {
+.dynamic_banner-inner .bottom-desc .right-desc .desc-inner {
     display: flex;
     display: -webkit-flex;
     gap: 30px;
@@ -200,38 +188,38 @@ canvas {
     -webkit-align-items: center;
 }
 
-.banner-inner .bottom-desc .right-desc .desc-inner span {
+.dynamic_banner-inner .bottom-desc .right-desc .desc-inner span {
     text-transform: uppercase;
 }
 
-.banner-inner .bottom-desc .right-desc .desc-inner ul {
+.dynamic_banner-inner .bottom-desc .right-desc .desc-inner ul {
     display: flex;
     display: -webkit-flex;
     gap: 8px;
 }
 
-.banner-inner .bottom-desc .right-desc .desc-inner ul li img {
+.dynamic_banner-inner .bottom-desc .right-desc .desc-inner ul li img {
     width: 16px;
 }
 
-.banner-inner .bottom-desc .right-desc .desc-inner ul li i {
+.dynamic_banner-inner .bottom-desc .right-desc .desc-inner ul li i {
     font-size: 16px;
 }
 
 @media (min-width: 1200px) and (max-width: 1499px) {
-    .banner-inner {
+    .dynamic_banner-inner {
         min-height: calc(100dvh - 85px);
     }
 
-    .banner-inner .bottom-desc .right-desc h1 {
+    .dynamic_banner-inner .bottom-desc .right-desc h1 {
         padding-right: 40px;
     }
 
-    .banner-inner .bottom-desc .right-desc h1::after {
+    .dynamic_banner-inner .bottom-desc .right-desc h1::after {
         width: 16%;
     }
 
-    .banner-inner .bottom-desc .right-desc .desc-inner {
+    .dynamic_banner-inner .bottom-desc .right-desc .desc-inner {
         gap: 20px;
     }
 }
@@ -243,39 +231,39 @@ canvas {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    .banner-inner {
+    .dynamic_banner-inner {
         min-height: calc(100dvh - 76px);
         padding-top: 80px;
     }
 
-    .banner-inner .bottom-desc .right-desc h1 {
+    .dynamic_banner-inner .bottom-desc .right-desc h1 {
         padding-right: 30px;
     }
 
-    .banner-inner .bottom-desc .right-desc h1::after {
+    .dynamic_banner-inner .bottom-desc .right-desc h1::after {
         width: 12%;
     }
 
-    .banner-inner .bottom-desc .right-desc .desc-inner {
+    .dynamic_banner-inner .bottom-desc .right-desc .desc-inner {
         gap: 16px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .banner-inner {
+    .dynamic_banner-inner {
         min-height: calc(100dvh - 70px);
         padding-top: 60px;
     }
 
-    .banner-inner .bottom-desc .right-desc h1 {
+    .dynamic_banner-inner .bottom-desc .right-desc h1 {
         padding-right: 30px;
     }
 
-    .banner-inner .bottom-desc .right-desc h1::after {
+    .dynamic_banner-inner .bottom-desc .right-desc h1::after {
         width: 10%;
     }
 
-    .banner-inner .bottom-desc .right-desc .desc-inner {
+    .dynamic_banner-inner .bottom-desc .right-desc .desc-inner {
         gap: 12px;
     }
 }
@@ -289,36 +277,36 @@ canvas {
         font-size: 12px;
     }
 
-    .banner-inner {
+    .dynamic_banner-inner {
         min-height: calc(100dvh - 60px);
         padding-top: 40px;
     }
 
-    .banner-inner .bottom-desc .left-desc h1 {
+    .dynamic_banner-inner .bottom-desc .left-desc h1 {
         margin-bottom: 14px;
     }
 
-    .banner-inner .bottom-desc .middle-desc {
+    .dynamic_banner-inner .bottom-desc .middle-desc {
         display: none;
     }
 
-    .banner-inner .bottom-desc .right-desc h1 {
+    .dynamic_banner-inner .bottom-desc .right-desc h1 {
         padding-right: 22px;
     }
 
-    .banner-inner .bottom-desc .right-desc h1::after {
+    .dynamic_banner-inner .bottom-desc .right-desc h1::after {
         width: 10%;
     }
 
-    .banner-inner .bottom-desc .right-desc .desc-inner {
+    .dynamic_banner-inner .bottom-desc .right-desc .desc-inner {
         gap: 12px;
     }
 
-    .banner-inner .bottom-desc .right-desc .desc-inner ul {
+    .dynamic_banner-inner .bottom-desc .right-desc .desc-inner ul {
         gap: 4px;
     }
 
-    .banner-inner .bottom-desc .right-desc .desc-inner ul li img {
+    .dynamic_banner-inner .bottom-desc .right-desc .desc-inner ul li img {
         width: 14px;
     }
 }
