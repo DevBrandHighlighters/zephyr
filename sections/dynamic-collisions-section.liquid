@@ -392,32 +392,6 @@
         ease: 'power3',
       });
 
-    // Mouse move handler
-    function onMouseMove(event) {
-      if (!loadingComplete) return;
-
-      xTo(event.clientX);
-      yTo(event.clientY);
-
-      xFollow(event.clientX);
-      yFollow(event.clientY);
-
-      mouse_effect.style.opacity = '1';
-
-      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-      raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObjects(spheres);
-
-      if (intersects.length > 0) {
-        const hoveredSphere = intersects[0].object;
-        const force = new THREE.Vector3();
-        force.subVectors(intersects[0].point, hoveredSphere.position).normalize().multiplyScalar(0.2);
-        forces.set(hoveredSphere.uuid, force);
-      }
-    }
-
     // Collision detection
     function handleCollisions() {
       for (let i = 0; i < spheres.length; i++) {
