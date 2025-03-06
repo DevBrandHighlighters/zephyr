@@ -305,7 +305,9 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <div class="custom-cursor"></div>
+    <div class="custom-cursor">
+      <span class="custom-cursor_outline"></span>
+    </div>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -387,7 +389,7 @@
         document.querySelectorAll("a, button").forEach((el) => {
           el.addEventListener("mouseenter", () => {
             cursor.style.transform = "scale(1.5)";
-            cursor.style.borderColor = "red"; /* Change border color on hover */
+            cursor.style.borderColor = "red";
           });
           el.addEventListener("mouseleave", () => {
             cursor.style.transform = "scale(1)";
