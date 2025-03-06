@@ -3601,7 +3601,7 @@ details-disclosure > details {
 }
 .custom-cursor {
   position: fixed;
-  background-color: #000c;
+  background-color: #ffffffa8;
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -3616,7 +3616,7 @@ span.custom-cursor_outline {
   height: 30px;
   display: block;
   border-radius: 50px;
-  border: 1px solid red;
+  border: 1px solid #000000cc;
   display: flex;
   justify-content: center;
   align-items: center;
