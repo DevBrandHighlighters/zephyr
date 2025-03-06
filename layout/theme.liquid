@@ -317,6 +317,11 @@
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
+      
+      <div class="mouse-effect">
+        <div class="circle"></div>
+        <div class="circle-follow"></div>
+      </div>
     </main>
 
     {% sections 'footer-group' %}
