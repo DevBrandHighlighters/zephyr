@@ -305,6 +305,7 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    <div class="custom-cursor"></div>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -317,11 +318,6 @@
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
-      
-      <div class="mouse-effect">
-        <div class="circle"></div>
-        <div class="circle-follow"></div>
-      </div>
     </main>
 
     {% sections 'footer-group' %}
