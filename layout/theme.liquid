@@ -389,11 +389,9 @@
         document.querySelectorAll("a, button").forEach((el) => {
           el.addEventListener("mouseenter", () => {
             cursor.style.transform = "scale(1.5)";
-            cursor.style.borderColor = "red";
           });
           el.addEventListener("mouseleave", () => {
             cursor.style.transform = "scale(1)";
-            cursor.style.borderColor = "green";
           });
         });
     });
