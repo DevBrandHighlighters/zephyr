@@ -3606,4 +3606,5 @@ details-disclosure > details {
     transform: translate(-50%, -50%);
     transition: transform 0.1s ease-out;
     z-index: 9999;
+  display: block !important;
 }
