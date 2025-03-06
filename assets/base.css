@@ -3601,7 +3601,7 @@ details-disclosure > details {
 }
 
 /* Custom cursor */
-.custom-cursor_outline {
+.custom-cursor {
   position: fixed;
   width: 30px; /* Adjust size */
   height: 30px;
