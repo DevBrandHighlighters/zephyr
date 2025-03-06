@@ -1,6 +1,38 @@
+{% schema %}
+{
+  "name": "Product Description",
+  "settings": [
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Product Title",
+      "default": "Product Description"
+    },
+    {
+      "type": "textarea",
+      "id": "product_description",
+      "label": "Product Description",
+      "default": "The purpose of this feature is to enhance the product description process, aligning it with the user-friendly interfaces found on platforms like Shopify and other e-commerce stores. It caters specifically to individuals with non-technical backgrounds, ensuring a seamless experience for those who may not be familiar with HTML. This approach simplifies the product description creation, allowing users to effortlessly add and format content without requiring advanced technical skills."
+    },
+    {
+      "type": "richtext",
+      "id": "editable_description",
+      "label": "Editable Description",
+      "default": "<p>Add your product description here...</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Description",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
+
 <div class="product-description-section">
-  <div class="title">{{ section.settings.product_title }}</div>
-  <div class="title">{{ section.settings.product_description }}</div>
+  <h1 class="title">{{ section.settings.product_title }}</h1>
+  <p class="title">{{ section.settings.product_description }}</p>
 
   <div class="product-description">
     <div class="editor-toolbar">
@@ -28,7 +60,7 @@
       <button onclick="insertVideo()">Video</button>
     </div>
     <div contenteditable="true" id="product-desc">
-      {{ product.metafields.custom.editable_description | default: 'Add your product description here...' }}
+      {{ section.settings.editable_description }}
     </div>
   </div>
 </div>
@@ -68,29 +100,3 @@
     }
   }
 </script>
-
-{% schema %}
-{
-  "name": "Product Description",
-  "settings": [
-    {
-      "type": "richtext",
-      "id": "product_title",
-      "label": "Title",
-      "default": "<p>Product Description</p>"
-    },
-    {
-      "type": "richtext",
-      "id": "product_description",
-      "label": "Description",
-      "default": "<p>The purpose of this feature is to enhance the product description process.</p>"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Product Description",
-      "category": "Product"
-    }
-  ]
-}
-{% endschema %}
