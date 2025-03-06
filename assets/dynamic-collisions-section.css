@@ -1,3 +1,6 @@
+.dynamic_banner {
+  background: #ffbcbc40;
+}
 .dynamic_banner canvas {
   position: fixed;
   top: 50px;
