@@ -6,7 +6,7 @@ canvas {
 }
 
 .mouse-effect {
-  opacity: 0;
+  opacity: 1;
   position: fixed;
   top: 0px;
   left: 0px;
