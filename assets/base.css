@@ -3597,14 +3597,14 @@ details-disclosure > details {
 }
 
 .custom-cursor {
-    position: fixed;
-    width: 30px; /* Adjust size */
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.8); /* Adjust color */
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease-out;
-    z-index: 9999;
+  position: fixed;
+  width: 30px; /* Adjust size */
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust color */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 9999;
   display: block !important;
 }
