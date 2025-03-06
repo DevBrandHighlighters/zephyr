@@ -12,34 +12,6 @@ canvas {
   left: 0px;
 }
 
-.circle {
-  position: absolute;
-  background-color: var(--black-color);
-  width: 10px;
-  height: 10px;
-  left: 0px;
-  top: 0px;
-  border-radius: 100%;
-  z-index: 111111;
-  user-select: none;
-  pointer-events: none;
-  transition: all 0.05s;
-}
-
-.circle-follow {
-  position: absolute;
-  border: 1px solid var(--black-color);
-  width: 40px;
-  height: 40px;
-  left: 0px;
-  top: 0px;
-  border-radius: 100%;
-  z-index: 111111;
-  user-select: none;
-  pointer-events: none;
-  transition: all 0.1s;
-}
-
 .ham-btn {
   background: transparent;
   border: none;
