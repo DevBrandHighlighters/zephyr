@@ -3595,12 +3595,18 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+/* Hide default cursor */
+* {
+  cursor: none;
+}
 
+/* Custom cursor */
 .custom-cursor {
   position: fixed;
   width: 30px; /* Adjust size */
   height: 30px;
-  background-color: rgba(0, 0, 0, 0.8); /* Adjust color */
+  background-color: rgba(0, 0, 0, 0.8); /* Inner circle color */
+  border: 2px solid white; /* Border */
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);

@@ -372,30 +372,35 @@
       };
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
         const cursor = document.querySelector(".custom-cursor");
+    
         document.addEventListener("mousemove", function(e) {
-          cursor.style.left = e.clientX + "px";
-          cursor.style.top = e.clientY + "px";
+            cursor.style.left = e.clientX + "px";
+            cursor.style.top = e.clientY + "px";
         });
+    
         document.addEventListener("mouseenter", function() {
-          cursor.style.opacity = "1";
+            cursor.style.opacity = "1";
         });
+    
         document.addEventListener("mouseleave", function() {
-          cursor.style.opacity = "0";
+            cursor.style.opacity = "0";
         });
+    
         document.querySelectorAll("a, button").forEach((el) => {
-          el.addEventListener("mouseenter", () => {
-            cursor.style.transform = "scale(1.5)";
-            cursor.style.backgroundColor = "rgba(255, 0, 0, 0.8)"; /* Change color on hover */
-          });
-          el.addEventListener("mouseleave", () => {
-            cursor.style.transform = "scale(1)";
-            cursor.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-          });
+            el.addEventListener("mouseenter", () => {
+                cursor.style.transform = "scale(1.5)";
+                cursor.style.borderColor = "red"; /* Change border color on hover */
+            });
+            el.addEventListener("mouseleave", () => {
+                cursor.style.transform = "scale(1)";
+                cursor.style.borderColor = "white";
+            });
         });
-      });
+    });
     </script>
+
 
 
     {%- if settings.predictive_search_enabled -%}
