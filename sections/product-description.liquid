@@ -1,0 +1,98 @@
+<div class="product-description-section">
+  <h1 class="title">{{ section.settings.product_title }}</h1>
+  <p class="title">
+    {{ section.settings.product_description }}
+  </p>
+
+  <div class="product-description">
+    <div class="editor-toolbar">
+      <button onclick="execCommand('bold')"><b>B</b></button>
+      <button onclick="execCommand('italic')"><i>I</i></button>
+      <button onclick="execCommand('underline')"><u>U</u></button>
+      <select onchange="applyHeading(this)">
+        <option value="p">Paragraph</option>
+        <option value="h1">Heading 1</option>
+        <option value="h2">Heading 2</option>
+        <option value="h3">Heading 3</option>
+        <option value="h4">Heading 4</option>
+        <option value="h5">Heading 5</option>
+        <option value="h6">Heading 6</option>
+      </select>
+      <input type="color" onchange="applyColor(this)">
+      <select onchange="applyAlignment(this)">
+        <option value="left">Left</option>
+        <option value="center">Center</option>
+        <option value="right">Right</option>
+      </select>
+      <button onclick="execCommand('insertUnorderedList')">&#8226;</button>
+      <button onclick="execCommand('insertOrderedList')">1.</button>
+      <button onclick="insertImage()">Image</button>
+      <button onclick="insertVideo()">Video</button>
+    </div>
+    <div contenteditable="true" id="product-desc">
+      {{ product.metafields.custom.editable_description | default: 'Add your product description here...' }}
+    </div>
+  </div>
+</div>
+
+<script>
+  function execCommand(command) {
+    document.execCommand(command, false, null);
+  }
+
+  function applyHeading(select) {
+    const value = select.value;
+    document.execCommand('formatBlock', false, value);
+  }
+
+  function applyColor(input) {
+    const color = input.value;
+    document.execCommand('foreColor', false, color);
+  }
+
+  function applyAlignment(select) {
+    const alignment = select.value;
+    document.execCommand('justify' + alignment, false, null);
+  }
+
+  function insertImage() {
+    const url = prompt('Enter image URL:');
+    if (url) {
+      document.execCommand('insertImage', false, url);
+    }
+  }
+
+  function insertVideo() {
+    const url = prompt('Enter video URL:');
+    if (url) {
+      const embedCode = `<iframe width="560" height="315" src="${url}" frameborder="0" allowfullscreen></iframe>`;
+      document.execCommand('insertHTML', false, embedCode);
+    }
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Product Description",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "product_title",
+      "label": "Title",
+      "default": "Product Description"
+    },
+    {
+      "type": "richtext",
+      "id": "product_description",
+      "label": "Description",
+      "default": "The purpose of this feature is to enhance the product description process, aligning it with the user-friendly interfaces found on platforms like Shopify and other e-commerce stores. It caters specifically to individuals with non-technical backgrounds, ensuring a seamless experience for those who may not be familiar with HTML. This approach simplifies the product description creation, allowing users to effortlessly add and format content without requiring advanced technical skills."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Description",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
