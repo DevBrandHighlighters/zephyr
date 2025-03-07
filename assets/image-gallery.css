@@ -1,3 +1,6 @@
 .skewElem {
   will-change: transform;
 }
+.images_gallery {
+  display: grid;
+}
