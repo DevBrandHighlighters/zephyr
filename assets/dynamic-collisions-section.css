@@ -2,8 +2,8 @@
   background: #ffbcbc40;
 }
 .dynamic_banner canvas {
-  position: fixed;
-  top: 50px;
+  position: absolute;
+  top: 0px;
   left: 0;
   z-index: -1;
 }
