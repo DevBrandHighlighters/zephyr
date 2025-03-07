@@ -1,6 +1,10 @@
-.skewElem {
-  will-change: transform;
-}
 .images_gallery {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.images_gallery .skewElem {
+  will-change: transform;
+  max-width: 100%;
+  width: 100%;
 }
