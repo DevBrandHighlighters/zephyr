@@ -14,6 +14,35 @@
   {% endfor %}
 </section>
 
+<script>
+  function clamp(value, min = -10, max = 10) {
+    return Math.min(Math.max(value, min), max);
+  }
+
+  let proxy = { skew: 0 },
+      skewSetter = gsap.quickSetter('.custom-skewElem', 'skewY', 'deg');
+
+  ScrollTrigger.create({
+    onUpdate: (self) => {
+      let skew = clamp(self.getVelocity() / -300);
+      if (Math.abs(skew) > Math.abs(proxy.skew)) {
+        proxy.skew = skew;
+        gsap.to(proxy, {
+          skew: 0,
+          duration: 0.8,
+          ease: 'power3',
+          overwrite: true,
+          onUpdate: () => skewSetter(proxy.skew),
+        });
+      }
+    },
+    start: 'top center',
+    end: 'bottom center',
+    scrub: 1,
+  });
+
+  gsap.set('.custom-skewElem', { transformOrigin: 'right center' });
+</script>
 {% schema %}
 {
   "name": "Image Gallery",
