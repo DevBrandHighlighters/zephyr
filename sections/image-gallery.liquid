@@ -14,13 +14,15 @@
 {%- endstyle -%}
 
 <section class="page-width section-{{ section.id }}-padding">
-  {% for block in section.blocks %}
-    <img
-      src="{{ block.settings.image | img_url: '600x600' }}"
-      alt="Gallery Image"
-      class="skewElem"
-    >
-  {% endfor %}
+  <div class="images_gallery">
+    {% for block in section.blocks %}
+      <img
+        src="{{ block.settings.image | img_url: '600x600' }}"
+        alt="Gallery Image"
+        class="skewElem"
+      >
+    {% endfor %}
+  </div>
 </section>
 
 <script>
