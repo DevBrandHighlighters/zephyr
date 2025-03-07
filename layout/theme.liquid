@@ -305,6 +305,9 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    <div class="custom-cursor">
+      <span class="custom-cursor_outline"></span>
+    </div>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -370,6 +373,31 @@
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
     </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const cursor = document.querySelector(".custom-cursor");
+        document.addEventListener("mousemove", function(e) {
+          cursor.style.left = e.clientX + "px";
+          cursor.style.top = e.clientY + "px";
+        });
+        document.addEventListener("mouseenter", function() {
+          cursor.style.opacity = "1";
+        });
+        document.addEventListener("mouseleave", function() {
+          cursor.style.opacity = "0";
+        });
+        document.querySelectorAll("a, button").forEach((el) => {
+          el.addEventListener("mouseenter", () => {
+            cursor.style.transform = "scale(1.3)";
+          });
+          el.addEventListener("mouseleave", () => {
+            cursor.style.transform = "scale(1)";
+          });
+        });
+    });
+    </script>
+
+
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
