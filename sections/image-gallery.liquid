@@ -7,7 +7,7 @@
 <section class="page-width">
   {% for block in section.blocks %}
     <img
-      src="{{ block.settings.image | img_url: 'master' }}"
+      src="{{ block.settings.image | img_url: '1080x1080' }}"
       alt="{{ block.settings.image.alt | default: 'Gallery Image' }}"
       class="custom-skewElem"
     >
