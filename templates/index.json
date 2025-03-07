@@ -9,10 +9,10 @@
  */
 {
   "sections": {
-    "dynamic_collisions_section_ENAQXU": {
-      "type": "dynamic-collisions-section",
+    "new_banner_y3dVtk": {
+      "type": "new-banner",
       "settings": {
-        "main_title": "BRAND HIGHLIGHTER",
+        "main_title": "BRAND HIGHLIGHTERS",
         "section_title": "Despersion Collisions",
         "section_subtitle": "Research & Development",
         "left_title": "Pink & Rose Gold",
@@ -69,7 +69,9 @@
         "image_EeYGdP",
         "image_DUR7D6"
       ],
-      "settings": {}
+      "settings": {
+        "max_skew": 10
+      }
     },
     "featured_collection": {
       "type": "featured-collection",
@@ -101,7 +103,7 @@
     }
   },
   "order": [
-    "dynamic_collisions_section_ENAQXU",
+    "new_banner_y3dVtk",
     "image_gallery_nYLjrn",
     "featured_collection"
   ]
