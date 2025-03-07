@@ -21,6 +21,56 @@
         "social_heading": "Follow Us"
       }
     },
+    "image_gallery_nYLjrn": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_DjMYkB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Chikankari_Anarkali_kurta.jpg"
+          }
+        },
+        "image_YP3UB8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Blue_Chikankari_Kurta_with_embroidery.jpg"
+          }
+        },
+        "image_TgWqDN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Buy_Chikankari_Short_Kurti.jpg"
+          }
+        },
+        "image_7QrJa8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Chikankari_Kurti_for_women_with_gold_embroidery.webp"
+          }
+        },
+        "image_EeYGdP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shop_Blue_Chikankari_Kurta.jpg"
+          }
+        },
+        "image_DUR7D6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Georgette_Black_Chikankari_Kurti.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_DjMYkB",
+        "image_YP3UB8",
+        "image_TgWqDN",
+        "image_7QrJa8",
+        "image_EeYGdP",
+        "image_DUR7D6"
+      ],
+      "settings": {}
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -48,10 +98,6 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
-    },
-    "image_gallery_nYLjrn": {
-      "type": "image-gallery",
-      "settings": {}
     }
   },
   "order": [
