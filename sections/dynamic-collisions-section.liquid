@@ -8,25 +8,23 @@
 <section class="dynamic_banner hide-text">
   <div class="dynamic_banner-inner">
     <div class="top-desc">
-      <h5>Despersion Collisions</h5>
-      <h6>Research & Development</h6>
+      <h5>{{ section.settings.section_title }}</h5>
+      <h6>{{ section.settings.section_subtitle }}</h6>
       <span></span>
     </div>
     <div class="bottom-desc">
       <div class="left-desc">
-        <h1>X</h1>
         <div class="desc-inner">
-          <h5>Pink & Rose Gold</h5>
-          <h6>Lighting & Material Study</h6>
+          <h5>{{ section.settings.left_title }}</h5>
+          <h6>{{ section.settings.left_title1 }}</h6>
         </div>
       </div>
       <div class="middle-desc">
-        <h2>Dynamic Collisions</h2>
+        <h2>{{ section.settings.main_title }}</h2>
       </div>
       <div class="right-desc">
-        <h1>01</h1>
         <div class="desc-inner">
-          <span>Social Links</span>
+          <span>{{ section.settings.social_heading }}</span>
           <ul>
             <li>
               <a href="#">
@@ -494,7 +492,66 @@
 {% schema %}
 {
   "name": "Dynamic Collisions",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main Text"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main Title",
+      "default": "Your Store Name"
+    },
+    {
+      "type": "header",
+      "content": "Top Left Text"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Despersion Collisions"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Section Subtitle",
+      "default": "Research & Development"
+    },
+    {
+      "type": "header",
+      "content": "Bottom Left Text"
+    },
+    {
+      "type": "text",
+      "id": "left_title",
+      "label": "Left Title",
+      "default": "Pink & Rose Gold"
+    },
+    {
+      "type": "text",
+      "id": "left_title1",
+      "label": "Left Title 1",
+      "default": "Lighting & Material Study"
+    },
+    {
+      "type": "text",
+      "id": "left_subtitle",
+      "label": "Left Subtitle",
+      "default": "Social Links"
+    },
+    {
+      "type": "header",
+      "content": "Bottom Right Text"
+    },
+    {
+      "type": "text",
+      "id": "social_heading",
+      "label": "Social Heading",
+      "default": "Follow Us"
+    }
+  ],
   "presets": [
     {
       "name": "Dynamic Collisions"
