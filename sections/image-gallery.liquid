@@ -1,8 +1,4 @@
-{% style %}
-  .skewElem {
-    will-change: transform;
-  }
-{% endstyle %}
+{{ 'image-gallery.css' | asset_url | stylesheet_tag }}
 
 <section class="page-width">
   {% for block in section.blocks %}
