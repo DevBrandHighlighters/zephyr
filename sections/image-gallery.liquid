@@ -1,20 +1,11 @@
 <section>
-  <img width="600" height="600" src="https://picsum.photos/600/600?random=1" alt="" class="skewElem">
-  <img width="600" height="600" src="https://picsum.photos/600/600?random=2" alt="" class="skewElem">
-  <img width="600" height="600" src="https://picsum.photos/600/600?random=3" alt="" class="skewElem">
-  <img width="600" height="600" src="https://picsum.photos/600/600?random=4" alt="" class="skewElem">
-  <img width="600" height="600" src="https://picsum.photos/600/600?random=5" alt="" class="skewElem">
-  <img width="600" height="600" src="https://picsum.photos/600/600?random=6" alt="" class="skewElem">
-  <img width="600" height="600" src="https://picsum.photos/600/600?random=7" alt="" class="skewElem">
-  <img width="600" height="600" src="https://picsum.photos/600/600?random=8" alt="" class="skewElem">
-  <img width="600" height="600" src="https://picsum.photos/600/600?random=9" alt="" class="skewElem">
-  <img width="600" height="600" src="https://picsum.photos/600/600?random=10" alt="" class="skewElem">
+  {% for block in section.blocks %}
+    <img src="{{ block.settings.image | img_url: '600x600' }}" alt="" class="custom-skewElem">
+  {% endfor %}
 </section>
 <script>
   let proxy = { skew: 0 },
-    skewSetter = gsap.quickSetter('.skewElem', 'skewY', 'deg'), // fast
-    clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
-
+    skewSetter = gsap.quickSetter('.custom-skewElem', 'skewY', 'deg'),
   ScrollTrigger.create({
     onUpdate: (self) => {
       let skew = clamp(self.getVelocity() / -300);
@@ -30,7 +21,7 @@
       }
     },
   });
-  gsap.set('.skewElem', { transformOrigin: 'right center', force3D: true });
+  gsap.set('.custom-skewElem', { transformOrigin: 'right center', force3D: true });
 </script>
 {% schema %}
 {
