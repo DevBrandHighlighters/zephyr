@@ -6,6 +6,8 @@
   top: 100px;
   left: 0;
   z-index: -1;
+  overflow-x: hidden !important;
+  width: 100% !important;
 }
 
 .mouse-effect {
