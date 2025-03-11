@@ -1,6 +1,27 @@
+{% if recommendations.products_count > 0 %}
+    <h2>Recommended Products</h2>
+    <div class="grid">
+        {% for product in recommendations.products %}
+            <div class="product">
+                <a href="{{ product.url }}">
+                    <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+                    <h3>{{ product.title }}</h3>
+                    <p>{{ product.price | money }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Product Recommendations",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Product Recommendations"
+      }
+    ]
   }
 {% endschema %}
